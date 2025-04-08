@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STARYS - Loja de Produtos</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Corpo e tema escuro */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    /* Cabeçalho */
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #aaaaaa;
+    }
+    /* Container principal */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 10px;
+    }
+    /* Lista de produtos */
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .product {
+      background-color: #1f1f1f;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      width: 300px;
+      margin: 20px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: scale(1.03);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .product-info p {
+      font-size: 0.95rem;
+      color: #cccccc;
+      margin-bottom: 15px;
+    }
+    .price {
+      font-size: 1.2rem;
+      color: #ff9800;
+      margin-bottom: 10px;
+    }
+    .buy-btn {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      background-color: #ff9800;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .buy-btn:hover {
+      background-color: #e68900;
+    }
+    /* Rodapé */
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #aaaaaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>STARYS</h1>
+    <p>Loja de venda de produtos</p>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <div class="product-list">
+      <!-- Produto: Livro 1 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Livro+1" alt="Livro 1">
+        <div class="product-info">
+          <h2>Livro 1</h2>
+          <p>Um livro incrível sobre desenvolvimento pessoal.</p>
+          <div class="price">R$ 39,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+      <!-- Produto: Livro 2 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Livro+2" alt="Livro 2">
+        <div class="product-info">
+          <h2>Livro 2</h2>
+          <p>Descubra os segredos do sucesso com este best-seller.</p>
+          <div class="price">R$ 49,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+      <!-- Produto: Item A -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Produto+A" alt="Produto A">
+        <div class="product-info">
+          <h2>Produto A</h2>
+          <p>Um produto de alta qualidade para o seu dia a dia.</p>
+          <div class="price">R$ 29,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+      <!-- Produto: Item B -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Produto+B" alt="Produto B">
+        <div class="product-info">
+          <h2>Produto B</h2>
+          <p>Excelência e inovação em um só produto.</p>
+          <div class="price">R$ 19,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 STARYS - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Exemplo simples de JavaScript para uma notificação ao clicar no botão "Comprar" -->
+  <script>
+    const buttons = document.querySelectorAll('.buy-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('Obrigado por sua compra! Em breve, entraremos em contato.');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+---
+
+Explicação
+
+HTML: A estrutura contém um cabeçalho com o nome “STARYS” e uma breve descrição, uma seção principal que exibe os produtos em cartões (cada produto possui imagem, título, descrição, preço e botão de comprar) e um rodapé.
+
+CSS: O estilo define um tema escuro (com fundo #121212 e elementos de destaque em #ff9800 para botões e preços). O layout é responsivo e os cartões de produtos são exibidos de forma flexível.
+
+JavaScript: Um pequeno script intercepta o clique dos botões “Comprar” para exibir uma mensagem de agradecimento (você pode expandir essa lógica para integrar com um sistema de carrinho ou checkout).
+
+
+Você pode adaptar e estender esse código conforme as necessidades do seu projeto – por exemplo, inserindo links reais, integrando um back-end ou adicionando mais estilos e funcionalidades.
+
+Segue um exemplo de código HTML, CSS e um pouquinho de JavaScript (para exemplificar uma interação simples) que monta uma página de loja para venda de livros e outros produtos, com tema escuro, nome "STARYS" e uma descrição “venda de produtos”. Você pode salvar o código abaixo em um arquivo com extensão “.html” e abri-lo em seu navegador para ver o resultado.
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STARYS - Loja de Produtos</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Corpo e tema escuro */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    /* Cabeçalho */
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #aaaaaa;
+    }
+    /* Container principal */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 10px;
+    }
+    /* Lista de produtos */
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .product {
+      background-color: #1f1f1f;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      width: 300px;
+      margin: 20px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: scale(1.03);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .product-info p {
+      font-size: 0.95rem;
+      color: #cccccc;
+      margin-bottom: 15px;
+    }
+    .price {
+      font-size: 1.2rem;
+      color: #ff9800;
+      margin-bottom: 10px;
+    }
+    .buy-btn {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      background-color: #ff9800;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .buy-btn:hover {
+      background-color: #e68900;
+    }
+    /* Rodapé */
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #aaaaaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>STARYS</h1>
+    <p>Loja de venda de produtos</p>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <div class="product-list">
+      <!-- Produto: Livro 1 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Livro+1" alt="Livro 1">
+        <div class="product-info">
+          <h2>Livro 1</h2>
+          <p>Um livro incrível sobre desenvolvimento pessoal.</p>
+          <div class="price">R$ 39,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+      <!-- Produto: Livro 2 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Livro+2" alt="Livro 2">
+        <div class="product-info">
+          <h2>Livro 2</h2>
+          <p>Descubra os segredos do sucesso com este best-seller.</p>
+          <div class="price">R$ 49,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+      <!-- Produto: Item A -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Produto+A" alt="Produto A">
+        <div class="product-info">
+          <h2>Produto A</h2>
+          <p>Um produto de alta qualidade para o seu dia a dia.</p>
+          <div class="price">R$ 29,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+      <!-- Produto: Item B -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200?text=Produto+B" alt="Produto B">
+        <div class="product-info">
+          <h2>Produto B</h2>
+          <p>Excelência e inovação em um só produto.</p>
+          <div class="price">R$ 19,90</div>
+          <a href="#" class="buy-btn">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 STARYS - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Exemplo simples de JavaScript para uma notificação ao clicar no botão "Comprar" -->
+  <script>
+    const buttons = document.querySelectorAll('.buy-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('Obrigado por sua compra! Em breve, entraremos em contato.');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+---
+
+Explicação
+
+HTML: A estrutura contém um cabeçalho com o nome “STARYS” e uma breve descrição, uma seção principal que exibe os produtos em cartões (cada produto possui imagem, título, descrição, preço e botão de comprar) e um rodapé.
+
+CSS: O estilo define um tema escuro (com fundo #121212 e elementos de destaque em #ff9800 para botões e preços). O layout é responsivo e os cartões de produtos são exibidos de forma flexível.
+
+JavaScript: Um pequeno script intercepta o clique dos botões “Comprar” para exibir uma mensagem de agradecimento (você pode expandir essa lógica para integrar com um sistema de carrinho ou checkout).
+
+
+Você pode adaptar e estender esse código conforme as necessidades do seu projeto – por exemplo, inserindo links reais, integrando um back-end ou adicionando mais estilos e funcionalidades.
+
